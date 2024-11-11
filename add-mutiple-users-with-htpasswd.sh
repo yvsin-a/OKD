@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Variables
-HTPASSWD_FILE="/home/user/okd/auth/htpasswd"     # Chemin vers le fichier htpasswd utilisé par OpenShift
-OPENSHIFT_SECRET_NAME="htpasswd-htokd"          # Nom du secret dans OpenShift pour le fichier htpasswd
-NAMESPACE="openshift-config"                     # Namespace où se trouve le secret htpasswd
-USER_ACTION=$1                                   # Action: add, update, ou delete
-shift                                            # Décale les arguments pour traiter les utilisateurs suivants
+HTPASSWD_FILE="file location"    
+OPENSHIFT_SECRET_NAME="htpasswd-secret"         
+NAMESPACE="openshift-config"                     
+USER_ACTION=$1                                   
+shift                                            
 
 # Fonction pour vérifier si le fichier htpasswd existe
 function check_htpasswd_file() {
